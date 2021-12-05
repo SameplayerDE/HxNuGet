@@ -91,9 +91,85 @@ public bool WasKeyboardKeyDown(Keys key);
 public bool IsKeyboardKeyUpOnce(Keys key);
 public bool IsKeyboardKeyUp(Keys key);
 public bool WasKeyboardKeyUp(Keys key);
+public void TextEntered(object sender, TextInputEventArgs e);
 ```
 
 #### Example
+How to process text input with keyboard
+
+
+```csharp
+public class Game1
+{
+/*
+ * Your Code
+**/
+Window.TextInput += InputManager.Instance.TextEntered; //Registers Methode To TextInput Event
+}
+```
+
+```csharp
+
+public string Text = "Text"; //Content Of The TextInput
+public SpriteFont Font;
+
+public bool Focus = false; //If The TextInput Has Focus
+public bool Edit = false; //If The TextInput Can Be Edited
+
+public TextInput()
+{
+    Input.Instance.OnCharDown += OnInput;
+}
+
+public void Update(GameTime gameTime);
+public void Draw(SpriteBatch spriteBatch, GameTime gameTime);
+
+private void OnInput(object sender, KeyboardCharEventArgs e)
+{
+    if (!Focus)
+    {
+        return;
+    }
+    switch (e.Char)
+    {
+        case '\a':
+            break;
+        case '\f':
+            break;
+        case '\r':
+            break;
+        case '\n':
+            break;
+        case '\t':
+            break;
+        case '\v':
+            break;
+        case '\0':
+            break;
+        case '\x1B':
+            break;
+        case ' ':
+            Text = Text?.Insert(Text.Length, " ");
+            break;
+        case '\b':
+        {
+            if (Text.Length - 1 >= 0)
+            {
+                Text = Text?.Remove(Text.Length - 1);
+            }
+            break;
+        }
+        default:
+            if (Font.Characters.Contains(e.Char))
+            {
+                Text = Text?.Insert(Text.Length, e.Char.ToString());
+            }
+            break;
+    }
+}
+````
+
+
 This code prints "Key Pressed" only one time when the key "G" was pressed
 
 Using OnKeyDown Event
