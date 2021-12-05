@@ -1,24 +1,24 @@
 # HxNuGet
 Documentation on how to use each HxNuGet package
 
-- [HxInput](#input)
-- [HxTime](#time)
-- [HxManager](#manager)
-- [HxSystem](#system)
+- [HxInput](#hxinput)
+- [HxTime](#hxtime)
+- [HxManager](#hxmanager)
+- [HxSystem](#hxsystem)
 
-# input
+
 # HxInput
 ## Dependencies
 TODO
 
 ## How to use
-- [Update](#input_update)
-- [Mouse Input](#input_mouse)
-- [Keyboard Input](#input_keyboard)
-- [GamePad Input](#input_gamepad)
+- [Update](#update_input)
+- [Mouse Input](#mouse_input)
+- [Keyboard Input](#keyboard_input)
+- [GamePad Input](#gamepad_input)
 
-# input_update
-### Update
+
+### Update Input 
 If you use HxInput without HxSystem then you have to call this code to update the input device states
 ```csharp
 Input.Instance.Update(gameTime);
