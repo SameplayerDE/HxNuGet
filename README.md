@@ -98,6 +98,7 @@ public void TextEntered(object sender, TextInputEventArgs e);
 How to process text input with keyboard
 
 
+Game1 Class
 ```csharp
 public class Game1
 {
@@ -108,6 +109,7 @@ Window.TextInput += InputManager.Instance.TextEntered; //Registers Methode To Te
 }
 ```
 
+TextInput Class - used in HxUserInterface (not released yet)
 ```csharp
 
 public string Text = "Text"; //Content Of The TextInput
