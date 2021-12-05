@@ -12,10 +12,10 @@ Documentation on how to use each HxNuGet package
 TODO
 
 ## How to use
-- [Update](#update_input)
-- [Mouse Input](#mouse_input)
-- [Keyboard Input](#keyboard_input)
-- [GamePad Input](#gamepad_input)
+- [Update](#update-input)
+- [Mouse Input](#mouse-input)
+- [Keyboard Input](#keyboard-input)
+- [GamePad Input](#gamepad-input)
 
 
 ### Update Input 
@@ -30,7 +30,12 @@ Hx.Instance.Update(gameTime);
 ```
 # input_mouse
 ### Mouse Input
-Here are all the methodes related to mouse input
+- [MouseDistanceVectorFrom]
+- [MouseDistancePointFrom]
+- [IsMouseKeyDownOnce]
+- [IsMouseKeyDown]
+- [IsMouseKeyUpOnce]
+- [IsMouseKeyUp]
 
 ```csharp
 public Vector2 MouseDistanceVectorFrom(Vector2 position);
