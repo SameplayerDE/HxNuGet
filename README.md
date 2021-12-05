@@ -2,6 +2,10 @@
 Documentation on how to use each HxNuGet package
 
 - [HxInput](#hxinput)
+  - Dependencies
+  - Events
+  - Public
+  - How To Use
 - [HxTime](#hxtime)
 - [HxManager](#hxmanager)
 - [HxSystem](#hxsystem)
@@ -11,8 +15,7 @@ Documentation on how to use each HxNuGet package
 ## Dependencies
 TODO
 
-## Public Members
-
+## Events
 ```csharp
 public event EventHandler<KeyboardKeyEventArgs> OnKeyDown;
 public event EventHandler<KeyboardKeyEventArgs> OnKeyUp;
@@ -23,7 +26,10 @@ public event EventHandler<MouseMoveEventArgs> OnMouseMove;
 
 public event EventHandler<GamePadEventArgs> OnGamePadConnect;
 public event EventHandler<GamePadEventArgs> OnGamePadDisconnect;
+```
 
+## Public
+```csharp
 public Vector2 LatestMouseDelta;
 
 public Point LatestMousePosition;
@@ -86,3 +92,45 @@ public bool IsKeyboardKeyUpOnce(Keys key);
 public bool IsKeyboardKeyUp(Keys key);
 public bool WasKeyboardKeyUp(Keys key);
 ```
+
+#### Example
+This code prints "Key Pressed" only one time when the key "G" was pressed
+
+Using OnKeyDown Event
+```csharp
+public void foo(object sender, KeyboardKeyEventArgs args)
+{
+    if (args.Key == Keys.G)
+    {
+        Console.WriteLine("Key Pressed");
+    }
+}
+
+//Somewhere in the code
+Input.Instance.OnKeyDown += foo;
+```
+
+Using IsKeyboardeKeyDownOnce Method
+```csharp
+if (Input.Instance.IsKeyboardeKeyDownOnce(Keys.G))
+{
+  Console.WriteLine("Key Pressed");
+}
+```
+
+### GamePad Input
+
+```csharp
+public bool IsGamepadButtonDown(PlayerIndex index, Buttons button);
+public bool IsGamepadButtonUp(PlayerIndex index, Buttons button);
+public bool WasGamepadButtonDown(PlayerIndex index, Buttons button);
+public bool WasButtonUp(PlayerIndex index, Buttons button);
+public bool IsGamepadButtonPressed(PlayerIndex index, Buttons button);
+public bool IsButtonReleased(PlayerIndex index, Buttons button);
+public bool IsGamePadConnected(PlayerIndex index);
+public bool WasGamePadConnected(PlayerIndex index);
+public bool IsGamePadDisconnected(PlayerIndex index);
+public bool WasGamePadDisconnected(PlayerIndex index);
+```
+
+### Touch Input
