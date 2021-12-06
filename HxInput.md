@@ -1,5 +1,5 @@
 # HxInput
-Documentation on how to use each HxNuGet package
+Documentation on how to use each HxIput package
 
 ## Dependencies
 TODO
@@ -91,10 +91,12 @@ Game1 Class
 ```csharp
 public class Game1
 {
-/*
- * Your Code
-**/
-Window.TextInput += InputManager.Instance.TextEntered; //Registers Methode To TextInput Event
+    public Game1() {
+        /*
+         * Your Code
+        **/
+        Window.TextInput += InputManager.Instance.TextEntered; //Registers Methode To TextInput Event
+    }
 }
 ```
 
@@ -201,3 +203,8 @@ public bool WasGamePadDisconnected(PlayerIndex index);
 ```
 
 ### Touch Input
+
+```csharp
+public bool IsTouchAvailable();
+public TouchLocation GetNearestTouchLocation(Vector2 location);
+```
