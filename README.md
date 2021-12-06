@@ -8,6 +8,7 @@ Documentation on how to use each HxNuGet package
   - How To Use
 - [HxTime](#hxtime)
 - [HxManager](#hxmanager)
+- [HxGraphics](#hxgraphics)
 - [HxSystem](#hxsystem)
 
 
