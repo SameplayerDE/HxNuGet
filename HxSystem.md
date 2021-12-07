@@ -68,6 +68,11 @@ Hx.Instance.Update(gameTime);
 ```
 
 ### Example
+
+NOTE
+TextureContentLoader is a self coded class and comes not with HxSystem.
+TextureContentLoader uses features from HxManager
+[TextureContentLoader.cs]()
 ```csharp
 
     public class Game1 : Game
