@@ -45,7 +45,7 @@ public bool AllowDrop; //default false
 - [How To Use Drag And Drop](#drag-and-drap)
 
 ### Init
-there three ways on how to use HxSystem.
+there are "three" ways on how to use HxSystem.
 
 First way is to use HxSystem only for the other HxNuGet packages, HxSystem has as dependencies.
 If you dont want to use HxSystem specific methods but you still want to use HxInput, HxTime, etc. all you have to do is to call the Update function of HxSystem
@@ -53,7 +53,7 @@ If you dont want to use HxSystem specific methods but you still want to use HxIn
 Hx.Instance.Update(gameTime);
 ```
 
-If you want to use HxSystem spoecific methods and functinalities you have to call the Init function in you main initilization method.
+If you want to use HxSystem spoecific methods and functinalities you have to call the Init function in your main init method.
 Init has three different overloads.
 
 ```csharp
