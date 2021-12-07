@@ -134,13 +134,7 @@ public void Init();
 public void Init(Game game);
 public void Init(Game game, GraphicsDeviceManager graphicsDeviceManager);
 public void SetGraphicsDeviceManager(GraphicsDeviceManager graphicsDeviceManager);
-
-internal void SetGraphicsDevice(GraphicsDevice graphicsDevice) // called by SetGraphicsDeviceManager
-{
-    _graphicsDevice = graphicsDevice;
-    Graphics.Instance.SetGraphicsDevice(_graphicsDevice);
-}
-
+public void SetGraphicsDevice(GraphicsDevice graphicsDevice);
 public void SetGame<T>(T game) where T : Game;
 public void Update(GameTime gameTime);
 public float GetRandomFloat();
