@@ -14,25 +14,24 @@ public event EventHandler<DragEventArgs> OnDragDrop;
 ```csharp
 public Random Random;
 
-public Viewport Viewport;
-public GraphicsDeviceManager GraphicsDeviceManager
-public GraphicsDevice GraphicsDevice;
-public ContentManager ContentManager;
+public Viewport Viewport; // Needs Game
+public GraphicsDeviceManager GraphicsDeviceManager; //Needs GraphicsDeviceManager, lol
+public GraphicsDevice GraphicsDevice; // Needs Game
+public ContentManager ContentManager; // Needs Game
 
-public Game Game;
-public Type GameType => Game.GetType();
+public Game Game; // Needs Game
+public Type GameType => Game.GetType(); // Needs Game
 
-public GameWindow GameWindow;
+public GameWindow GameWindow; // Needs Game
 
+public Point ViewportCenter; // Needs Game
+public float ViewportAspectRatio; // Needs Game
 
-public Point ViewportCenter;
-public float ViewportAspectRatio;
+public int ViewportWidth; // Needs Game
+public int ViewportHeight; // Needs Game
 
-public int ViewportWidth;
-public int ViewportHeight;
-
-public int PreferredBackBufferHeight;
-public int PreferredBackBufferWidth;
+public int PreferredBackBufferHeight; //Needs GraphicsDeviceManager
+public int PreferredBackBufferWidth; //Needs GraphicsDeviceManager
 
 public bool AllowDrop; //default false
 ```
