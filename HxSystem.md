@@ -6,17 +6,17 @@ TODO
 
 ## Events
 ```csharp
-public event EventHandler<DragEventArgs> OnDragEnter;
-public event EventHandler<DragEventArgs> OnDragDrop;
+public event EventHandler<DragEventArgs> OnDragEnter; // Needs Game
+public event EventHandler<DragEventArgs> OnDragDrop; // Needs Game
 ```
 
 ## Public
 ```csharp
 public Random Random;
 
-public Viewport Viewport; // Needs Game
+public Viewport Viewport; // Needs GraphicsDevice
 public GraphicsDeviceManager GraphicsDeviceManager; //Needs GraphicsDeviceManager, lol
-public GraphicsDevice GraphicsDevice; // Needs Game
+public GraphicsDevice GraphicsDevice; // Needs GraphicsDevice
 public ContentManager ContentManager; // Needs Game
 
 public Game Game; // Needs Game
@@ -24,11 +24,11 @@ public Type GameType => Game.GetType(); // Needs Game
 
 public GameWindow GameWindow; // Needs Game
 
-public Point ViewportCenter; // Needs Game
-public float ViewportAspectRatio; // Needs Game
+public Point ViewportCenter; // Needs GraphicsDevice
+public float ViewportAspectRatio; // Needs GraphicsDevice
 
-public int ViewportWidth; // Needs Game
-public int ViewportHeight; // Needs Game
+public int ViewportWidth; // Needs GraphicsDevice
+public int ViewportHeight; // Needs GraphicsDevice
 
 public int PreferredBackBufferHeight; //Needs GraphicsDeviceManager
 public int PreferredBackBufferWidth; //Needs GraphicsDeviceManager
@@ -134,6 +134,13 @@ public void Init();
 public void Init(Game game);
 public void Init(Game game, GraphicsDeviceManager graphicsDeviceManager);
 public void SetGraphicsDeviceManager(GraphicsDeviceManager graphicsDeviceManager);
+
+internal void SetGraphicsDevice(GraphicsDevice graphicsDevice) // called by SetGraphicsDeviceManager
+{
+    _graphicsDevice = graphicsDevice;
+    Graphics.Instance.SetGraphicsDevice(_graphicsDevice);
+}
+
 public void SetGame<T>(T game) where T : Game;
 public void Update(GameTime gameTime);
 public float GetRandomFloat();
