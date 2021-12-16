@@ -3,6 +3,7 @@ Documentation on how to use each HxNuGet package
 
 - [HxInput](#hxinput)
 - [HxTime](#hxtime)
+- [HxMath](#hxmath)
 - [HxManager](#hxmanager)
 - [HxGraphics](#hxgraphics)
 - [HxSystem](#hxsystem)
@@ -13,6 +14,9 @@ Documentation on how to use each HxNuGet package
 
 # HxTime
 [Documentation](https://github.com/SameplayerDE/HxNuGet/blob/master/HxTime.md)
+
+# HxMath
+[Documentation](https://github.com/SameplayerDE/HxNuGet/blob/master/HxMath.md)
 
 # HxManager
 [Documentation](https://github.com/SameplayerDE/HxNuGet/blob/master/HxManager.md)
