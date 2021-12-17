@@ -6,10 +6,10 @@ TODO
 
 ## Events
 ```csharp
-public event EventHandler<KeyboardKeyEventArgs> OnKeyDown;
-public event EventHandler<KeyboardKeyEventArgs> OnKeyUp;
+public event EventHandler<KeyboardKeyEventArgs> OnKeyDown; // Use Input.Instance.EnableTriggerKeyboardKeyEvents = true; otherwise event wont be invoked
+public event EventHandler<KeyboardKeyEventArgs> OnKeyUp; // Use Input.Instance.EnableTriggerKeyboardKeyEvents = true; otherwise event wont be invoked
 
-public event EventHandler<KeyboardCharEventArgs> OnCharDown;
+public event EventHandler<KeyboardCharEventArgs> OnCharDown; // Use Input.Instance.EnableTriggerKeyboardKeyEvents = true; otherwise event wont be invoked
 
 public event EventHandler<MouseMoveEventArgs> OnMouseMove;
 
