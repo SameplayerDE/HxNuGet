@@ -65,6 +65,10 @@ public void Init(Game game, GraphicsDeviceManager graphicsDeviceManager); //Reco
 ```csharp
 Hx.Instance.Update(gameTime);
 ```
+If you want to use HxTime, use this code after Hx.init method
+```csharp
+Hx.EnableTime = true;
+```
 
 ### Example
 
