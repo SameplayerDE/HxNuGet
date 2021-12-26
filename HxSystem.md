@@ -148,6 +148,10 @@ public int GetRandomInt32(int min, int max, int step = 1);
 ```
 
 ### Drag and Drop
+
+KEEP IN MIND!
+DRAG AND DROP CAN ONLY BE USED WHEN USING Monogame.Framework.WindowsDX
+
 ```csharp
 void DragDrop(object sender, DragEventArgs e)
 {
