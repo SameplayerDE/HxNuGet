@@ -181,7 +181,7 @@ Input.Instance.OnKeyDown += foo;
 
 Using IsKeyboardeKeyDownOnce Method
 ```csharp
-if (Input.Instance.IsKeyboardeKeyDownOnce(Keys.G))
+if (Input.Instance.IsKeyboardKeyDownOnce(Keys.G))
 {
   Console.WriteLine("Key Pressed");
 }
